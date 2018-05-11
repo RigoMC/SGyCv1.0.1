@@ -30,6 +30,7 @@ import { BodyComponent as PersonalComponent} from './paginas/personal/body/body.
 
 //componentes productos
 import { BodyComponent as ProductosComponent } from './paginas/productos/body/body.component';
+import { CardComponent } from './paginas/inicio/componentes/card/card.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { BodyComponent as ProductosComponent } from './paginas/productos/body/bo
     InfopedComponent,
     AddpedComponent,
     BarraubComponent,
-    NavbarComponent
+    NavbarComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
