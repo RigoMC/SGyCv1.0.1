@@ -1,0 +1,82 @@
+<div class="card margenes">
+  <div class="row">
+    <div class="col-md-3 bgG">
+      <h3 class="mgTT">Nuevo Material</h3>
+    </div>
+  <!--inputs-->
+  <div class="col-md-8 row mgL">
+    <form (ngSubmit)="guardar()" #forma="ngForm">
+      <div class="form-group row">
+          <div class="input-group input-group-sm mb-3 col-md-6 mgT">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Nombre:</span>
+            </div>
+            <input [(ngModel)]="material.nombre"
+              name="nombre"
+              type="text"
+              class="form-control"
+              aria-label="Small"
+              aria-describedby="inputGroup-sizing-sm" required>
+          </div>
+
+          <div class="input-group input-group-sm mb-3 col-md-6 mgT">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Descripcion:</span>
+            </div>
+            <input [(ngModel)]="material.descripcion"
+              name="descripcion"
+              type="text"
+              class="form-control"
+              aria-label="Small"
+              aria-describedby="inputGroup-sizing-sm">
+          </div>
+
+          <div class="input-group input-group-sm mb-3 col-md-6 mgT">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Cantidad Actual:</span>
+            </div>
+            <input [(ngModel)]="material.cantidad"
+              name="cantidad"
+              type="number"
+              step="any"
+              class="form-control"
+              aria-label="Small"
+              aria-describedby="inputGroup-sizing-sm" required>
+          </div>
+
+          <div class="input-group input-group-sm mb-3 col-md-6 mgT">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Unidad de Peso:</span>
+            </div>
+            <select class="custom-select" id="inputGroupSelect0" name="unidad" [(ngModel)]="material.unidad" required>
+                <option value="x">...</option>
+                <option value="kg">Kilogramos</option>
+                <option value="pz">Piezas</option>
+                <option value="g">Gramos</option>
+                <option value="l">Litros</option>
+            </select>
+          </div>
+
+          <div class="input-group input-group-sm mb-3 col-md-6 mgT">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Gasto <br> por Unidad:</span>
+            </div>
+            <input [(ngModel)]="material.gastoUnidad"
+              name="gastoUnidad"
+              type="number"
+              step="any"
+              class="form-control"
+              aria-label="Small"
+              aria-describedby="inputGroup-sizing-sm" required>
+          </div>
+
+          <div class="input-group input-group-sm mb-3 col-md-6 mgT">
+            <button [disabled]="!forma.valid"
+                    type="submit" class="btn btn-secondary btn-lg btn-block">Añadir</button>
+          </div>
+      </div>
+    </form>
+  </div>
+
+  </div>
+</div>

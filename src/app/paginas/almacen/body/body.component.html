@@ -1,0 +1,20 @@
+<div class="col-lg-12">
+
+    <!--Barra de acciones-->
+    <div class="row bgNav">
+      <div class="col-md-10">
+        <h2>Materiales</h2>
+      </div>
+      <div class="col-md-2">
+          <button type="button" class="btn btn-default btn-outline-secondary" (click)="nuevo = !nuevo">
+            <h5>Nuevo <img src="./../../../../assets/add.png" class="img-fluid pull-xs-left" alt="ADD"></h5>
+          </button>
+      </div>
+    </div>
+
+    <!--sección que sera modificada por enlaces-->
+
+    <div class="col-lg-12" *ngIf="nuevo">
+      <app-add></app-add>
+    </div>
+</div>

@@ -7,7 +7,4 @@ import {BarraubComponent} from './componentes/barraub/barraub.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
-  //variables globales.
-  public nubicacion = 0;
 }
